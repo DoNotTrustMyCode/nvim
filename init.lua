@@ -1,5 +1,6 @@
 -- TODO:
 -- ability to search hidden files
+-- common operation: yanking first and then commenting
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -527,12 +528,14 @@ require('lazy').setup({
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       -- default_lsps
       local servers = {
-        -- clangd = {},
+        clangd = {},
         gopls = {},
         omnisharp = {},
         dockerls = {},
         docker_compose_language_service = {},
         jsonls = {},
+        bashls = {},
+        tailwindcss = {},
 
         -- pyright = {},
         -- rust_analyzer = {},
@@ -885,5 +888,23 @@ require('lazy').setup({
   },
 })
 
+-- Transparency
+-- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+-- vim.api.nvim_set_hl(0, 'NonText', { bg = 'none' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
+--
